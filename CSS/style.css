@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  font: 18px;
+  background-color: hsl(217, 54%, 11%);
+  position: relative;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  /* color: hsl(228, 45%, 44%); */
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+.attribution {
+  color: hsl(215, 51%, 70%);
+  font-size: 0.8rem;
+}
+.card {
+  width: 90%;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 2rem auto;
+  background-color: hsl(216, 50%, 16%);
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+.card-img {
+  background-image: url(../images/image-equilibrium.jpg);
+  height: 20rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 6px;
+  position: relative;
+}
+.view-icon {
+  position: absolute;
+  top: 50%;
+  right: 42%;
+  transform: translate(0%, -50%);
+  opacity: 0;
+}
+.view-icon img {
+  width: 100%;
+  display: block;
+  opacity: 1;
+}
+.card-img:active .view-icon {
+  animation: mata 600ms forwards;
+}
+.card-img:active {
+  box-shadow: 0 6px 5px 2px rgba(0, 0, 0, 0.7);
+  transition: 300ms;
+}
+.card-title {
+  margin: 1rem 0;
+  font-weight: 300;
+  font-size: 0.7rem;
+  color: hsl(0, 0%, 100%);
+}
+.card-title h1:hover,
+.card-owner .card-owner-name span:hover,
+.attribution a:hover {
+  color: hsl(178, 100%, 50%);
+  transition: 300ms;
+}
+
+.card-caption {
+  margin: 1rem 0;
+}
+.card-caption p {
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+  font-size: 1rem;
+}
+.card-price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.card-price .price-1 p {
+  color: hsl(178, 100%, 50%);
+}
+.price-1,
+.price-2 {
+  position: relative;
+  z-index: 1;
+}
+.price-1 .eth-price {
+  padding-left: 1rem;
+}
+.price-1 .eth,
+.price-2 .clock {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+}
+.price-1 .eth img,
+.price-2 .clock img,
+.card-owner-pict img {
+  display: block;
+  width: 100%;
+}
+.price-2 .clock {
+  top: 15%;
+  bottom: 12%;
+}
+.card-owner {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+.price-2 .clock-info {
+  padding-left: 1.3rem;
+}
+.price-2 .clock-info p {
+  color: hsl(215, 51%, 70%);
+}
+.card-owner-pict {
+  width: 15%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.card-owner-name {
+  margin-left: 1rem;
+}
+.card-owner-name p {
+  color: hsl(215, 51%, 70%);
+}
+.card-owner-name span {
+  margin-left: 0.2rem;
+  color: hsl(0, 0%, 100%);
+}
+
+@keyframes mata {
+  from {
+    opacity: 0;
+    display: none;
+    transform: translate(0%, -50%) rotate(450deg) scale(0);
+  }
+  to {
+    display: inherit;
+    opacity: 1;
+    transform: translate(0%, -50%) rotate(0deg) scale(1);
+  }
+}
+@media (max-width: 375px) {
+  .attribution {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .card {
+    width: 23%;
+    position: absolute;
+    top: 45%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+  .attribution {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+  }
+}
