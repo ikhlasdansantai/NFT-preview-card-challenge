@@ -15,10 +15,15 @@ body {
   min-height: 100vh;
   flex-wrap: wrap;
 }
+main {
+  width: 100%;
+}
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .attribution {
   font-size: 11px;
