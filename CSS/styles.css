@@ -12,8 +12,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   min-height: 100vh;
+  flex-wrap: wrap;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .attribution {
   font-size: 11px;
@@ -166,11 +171,7 @@ body {
 }
 @media (min-width: 1440px) {
   .card {
-    width: 23%;
-    position: absolute;
-    top: 45%;
-    right: 50%;
-    transform: translate(50%, -50%);
+    width: 20rem;
   }
   .attribution {
     width: 100%;
