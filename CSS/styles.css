@@ -9,6 +9,11 @@ body {
   font: 18px;
   background-color: hsl(217, 54%, 11%);
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
 }
 .attribution {
   font-size: 11px;
@@ -24,10 +29,9 @@ body {
   font-size: 0.8rem;
 }
 .card {
-  width: 90%;
+  width: 20rem;
   border-radius: 10px;
   padding: 1rem;
-  margin: 2rem auto;
   background-color: hsl(216, 50%, 16%);
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
 }
@@ -58,13 +62,13 @@ body {
   box-shadow: 0 6px 5px 2px rgba(0, 0, 0, 0.7);
   transition: 300ms;
 }
-.card-title {
+.card h1 {
   margin: 1rem 0;
   font-weight: 300;
-  font-size: 0.7rem;
+  font-size: 1.5em;
   color: hsl(0, 0%, 100%);
 }
-.card-title h1:hover,
+.card h1:hover,
 .card-owner .card-owner-name span:hover,
 .attribution a:hover {
   color: hsl(178, 100%, 50%);
@@ -82,7 +86,8 @@ body {
 .card-price {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(149, 152, 156, 1);
 }
 .card-price .price-1 p {
   color: hsl(178, 100%, 50%);
